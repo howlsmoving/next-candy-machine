@@ -12,6 +12,11 @@ import Countdown from "react-countdown";
 import useWalletNfts from "../hooks/useWalletNFTs";
 import AnNFT from "../components/AnNFT/AnNFT";
 
+import Image from "next/image"
+import bg from "../public/bg.png"
+import showcase from "../public/showcase.gif"
+
+
 export default function Home() {
   const [balance] = useWalletBalance();
   const {
@@ -73,14 +78,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col items-center min-h-screen mx-6">
+      <div className="min-h-screen bg-gray-50 py-6 flex flex-col justify-center relative overflow-hidden sm:py-12">
+
+        {/* <Image className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none w-screen" src={bg}/> */}
+        <img src="/bg.png" className="absolute h-screen w-screen top-0"/>
+      <div className="relative px-4 pt-10 pb-8 bg-white shadow-xl ring-1 ring-gray-900/5 mx-6 rounded-lg sm:rounded-lg sm:mx-12 md:mx-16 sm:px-10">
         <Toaster />
-        <div className="flex items-center justify-between w-full mt-3">
-          <h1 className="text-2xl font-bold">next-candy-machine</h1>
+        <div className="flex items-center justify-between w-full mt-3"
+        >
+          <div className="-m-4 -mt-10 flex items-center">
+            <img className="h-32" src="/logo.png"/>
+            <p className="text-2xl">Hammurabi</p>
+          </div>
           <div className="flex items-center">
             {connected && (
               <div className="flex items-end mr-2">
-                <p className="text-xs text-gray-400">balance</p>
+                <p className="text-xs text-gray-400">Balance: </p>
                 <p className="mx-1 font-bold leading-none">
                   {balance.toFixed(2)}
                 </p>
@@ -89,21 +102,14 @@ export default function Home() {
                   style={{
                     backgroundImage: `linear-gradient(to bottom right, #00FFA3, #03E1FF, #DC1FFF)`,
                   }}
-                >
+                  >
                   SOL
                 </p>
               </div>
             )}
-            <WalletMultiButton />
+            <WalletMultiButton/>
           </div>
         </div>
-        {connected && (
-          <p className="mr-auto text-sm">
-            <span className="font-bold">Available/Minted/Total:</span>{" "}
-            {nftsData.itemsRemaining}/{nftsData.itemsRedeemed}/
-            {nftsData.itemsAvailable}
-          </p>
-        )}
         <div className="flex items-start justify-center w-11/12 my-10">
           {connected ? (
             <>
@@ -111,46 +117,73 @@ export default function Home() {
                 <>
                   {isSoldOut ? (
                     <p>SOLD OUT</p>
-                  ) : (
-                    <>
+                    ) : (
+                      <>
                       <div className="flex flex-col w-1/2">
-                        <h1 className="mb-10 text-3xl font-bold">Mint One</h1>
+                      {connected && (
+                            <div className="text-center p-6">
+                              
+                              <div className="">
+
+                              <Image className="rounded-full shadow-md" src={showcase} />
+                              </div>
+
+                              <div className="mr-auto text-sm font-bold text-lg">
+                                <span className="">Hammurabis Available: </span>
+                                {nftsData.itemsRemaining}
+                                <p>
+                                {nftsData.itemsRedeemed} / 1000 MINTED
+                                </p>
+                                <p>
+                                TOTAL NFT SUPPLY: 
+                                {nftsData.itemsAvailable}
+                                </p>
+                              </div>
+                            </div>
+                            )}
+                        <h1 className="mb-10 text-4xl text-center font-bold">MINT PRICE: 0.1 SOL</h1>
                         <button
                           onClick={startMint}
                           disabled={isMinting}
-                          className="px-4 py-2 mx-auto font-bold text-white transition-opacity rounded-lg hover:opacity-70 bg-gradient-to-br from-green-300 via-blue-500 to-purple-600"
-                        >
+                          className="px-4 py-2 mx-auto font-bold text-white text-5xl bg-yellow-300 hover:bg-yellow-500 shadow-lg"
+                          >
                           {isMinting ? "loading" : "mint 1"}
                         </button>
-                      </div>
-                      <div className="flex flex-col w-1/2">
-                        <h1 className="mb-10 text-3xl font-bold">Mint Many</h1>
-                        <MintMany />
                       </div>
                     </>
                   )}
                 </>
               ) : (
                 <Countdown
-                  date={mintStartDate}
-                  onMount={({ completed }) => completed && setIsMintLive(true)}
-                  onComplete={() => setIsMintLive(true)}
+                date={mintStartDate}
+                onMount={({ completed }) => completed && setIsMintLive(true)}
+                onComplete={() => setIsMintLive(true)}
                 />
-              )}
+                )}
             </>
           ) : (
-            <p>connect wallet to mint</p>
-          )}
+            <div className="flex-none">
+            
+            <p className="text-2xl font-bold">Connect Wallet to Mint</p>
+            <br />
+
+            <div className="flex text-2xl">
+            <p>NFTS AVAILABLE: </p>
+            <p className="px-2"> {nftsData.itemsAvailable}</p>
+            </div>
+            </div>
+            )}
         </div>
-        <div className="flex flex-col w-full">
+        {/* <div className="flex flex-col w-full">
           <h2 className="text-2xl font-bold">My NFTs</h2>
           <div className="flex mt-3 gap-x-2">
             {(nfts as any).map((nft: any, i: number) => {
               return <AnNFT key={i} nft={nft} />;
             })}
           </div>
-        </div>
+        </div> */}
       </div>
+            </div>
     </>
   );
 }
