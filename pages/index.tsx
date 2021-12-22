@@ -80,7 +80,7 @@ export default function Home() {
                 
       </Head>
 
-      <div className="min-h-screen flex flex-col font-kong justify-center items-center bg-bg-img bg-contain bg-repeat overflow-hidden">
+      <div className="min-h-screen flex flex-col font-kong justify-center items-center bg-bg-img bg-center bg-repeat overflow-hidden">
 
         {/* <Image className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none w-screen" src={bg}/> */}
         <div className="absolute h-screen w-full top-0">
