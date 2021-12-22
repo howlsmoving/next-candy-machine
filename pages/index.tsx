@@ -89,7 +89,7 @@ export default function Home() {
             {/* <div className="h-24 b-red-300 text-2xl">Hey</div> */}
         </div>
         
-      <div className="relative flex flex-col items-center justify-center px-4 pt-10 mt-20 bg-white shadow-xl ring-1 ring-gray-900 mx-6 rounded-lg sm:rounded-lg sm:mx-12 md:mx-16 lg:w-3/5 sm:px-10">
+      <div className="relative flex flex-col items-center justify-center px-4 pt-10 mt-12 bg-white shadow-xl ring-1 ring-gray-900 mx-6 rounded-lg sm:rounded-lg sm:mx-12 md:mx-16 lg:w-3/5 sm:px-10">
         <Toaster />
         <div className="flex w-full mt-3 justify-between"
         >
