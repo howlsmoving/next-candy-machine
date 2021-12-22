@@ -95,7 +95,7 @@ export default function Home() {
         >
           <div className="-m-4 -mt-10 flex items-center">
             <img className="h-32" src="/logo.png"/>
-            <p className="text-xl">Hammurabi's NFT</p>
+            <p className="text-xl">{"Hammurabi's NFT"}</p>
           </div>
           <div className="flex items-center">
             {connected && (
