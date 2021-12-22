@@ -3,14 +3,17 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+      
+      fontFamily: {
+        kong: "'Kongtext', san-serif",
+      },
+
+
+
       backgroundImage: (theme) => ({
         'bg-img': "url('/bg.png')"
-      })
-
+      }),
+      
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
 };

@@ -76,9 +76,11 @@ export default function Home() {
           content="Simplified NextJs with typescript example app integrated with Metaplex's Candy Machine"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link href="http://fonts.cdnfonts.com/css/kongtext" rel="stylesheet" />
+                
       </Head>
 
-      <div className="min-h-screen bg-gray-600 flex flex-col justify-center items-center bg-bg-img bg-cover overflow-hidden">
+      <div className="min-h-screen flex flex-col font-kong justify-center items-center bg-bg-img bg-contain bg-repeat overflow-hidden">
 
         {/* <Image className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none w-screen" src={bg}/> */}
         <div className="absolute h-screen w-full top-0">
@@ -89,7 +91,7 @@ export default function Home() {
         
       <div className="relative flex flex-col items-center justify-center px-4 pt-10 mt-20 bg-white shadow-xl ring-1 ring-gray-900 mx-6 rounded-lg sm:rounded-lg sm:mx-12 md:mx-16 lg:w-3/5 sm:px-10">
         <Toaster />
-        <div className="flex w-full mt-3"
+        <div className="flex w-full mt-3 justify-between"
         >
           <div className="-m-4 -mt-10 flex items-center">
             <img className="h-32" src="/logo.png"/>
@@ -124,7 +126,7 @@ export default function Home() {
                     <p>SOLD OUT</p>
                     ) : (
                       <>
-                      <div className="flex flex-col w-3/4">
+                      <div className="flex flex-col w-2/4">
                       {connected && (
                             <div className="text-center p-6">
                               
@@ -134,19 +136,21 @@ export default function Home() {
                               </div>
 
                               <div className="mr-auto text-sm font-bold text-lg">
-                                <span className="">NFTS Available: </span>
+                                <p className="py-2 text-xl">NFTS Available: 
                                 {nftsData.itemsRemaining}
-                                <p>
+                                
+                                </p>
+                                <p className="py-2 text-green-500">
                                 {nftsData.itemsRedeemed} / 1000 MINTED
                                 </p>
-                                <p>
+                                <p className="text-gray-700">
                                 TOTAL NFT SUPPLY: 
                                 {nftsData.itemsAvailable}
                                 </p>
                               </div>
                             </div>
                             )}
-                        <h1 className="mb-10 text-4xl text-center font-bold">MINT PRICE: 0.1 SOL</h1>
+                        <h1 className="mb-10 text-3xl text-center font-bold">MINT PRICE:1 SOL</h1>
                         <button
                           onClick={startMint}
                           disabled={isMinting}
@@ -154,7 +158,10 @@ export default function Home() {
                           >
                           {isMinting ? "loading" : "mint 1"}
                         </button>
-                        <p className="text-center text-lg mx-10">To celebrate the launch of Babylon, archaeological research has uncovered many mosaics of Hammurabi, king of Babylon well ahead of his time. Try to mint some of these mosaics, and win some special roles, and maybe a place among the Uruks.</p>
+                        <section className="-mx-14">
+
+                        <p className="text-center text-lg -mx-10">To celebrate the launch of Babylon, archaeological research has uncovered many mosaics of Hammurabi, king of Babylon well ahead of his time. Try to mint some of these mosaics, and win some special roles, and maybe a place among the Uruks.</p>
+                        </section>
             
                       </div>
                     </>
@@ -215,16 +222,19 @@ export default function Home() {
           </div>
         </div> */}
       </div>
-      <div className="flex justify-center space-x-14 md:space-x-48 bg-gradient-to-t from-green-600  min-h-20 to-transparent -translate-y-12 h-32 w-screen">
+      <div className="flex justify-center space-x-14 mt-6 md:space-x-48 bg-gradient-to-t from-green-600  min-h-20 to-transparent -translate-y-12 h-32 w-screen">
 
-        <a href="https://discord.gg/JQecN2HU">
-          <img src="https://img.icons8.com/ios/50/000000/discord-logo--v1.png"/>
+        <a className="flex flex-col items-center justify-center text-xs" href="https://discord.gg/JQecN2HU">
+          <img className="w-14" src="https://img.icons8.com/ios/50/000000/discord-logo--v1.png"/>
+          Discord
         </a>
-        <a href="https://twitter.com/BabylonDao">
-        <img src="https://img.icons8.com/ios/50/000000/twitter--v1.png"/>
+        <a className="flex flex-col items-center justify-center text-xs" href="https://twitter.com/BabylonDao">
+        <img className="w-14" src="https://img.icons8.com/ios/50/000000/twitter--v1.png"/>
+        Twitter
         </a>
-        <a href="https://babylondao.finance/#/">
-        <img width="50px" src="https://img.icons8.com/material-outlined/96/000000/link--v1.png"/>
+        <a className="flex flex-col items-center justify-center text-xs" href="https://babylondao.finance/#/">
+        <img className="w-14" src="https://img.icons8.com/material-outlined/96/000000/link--v1.png"/>
+        Website
         </a>
 
       </div>
