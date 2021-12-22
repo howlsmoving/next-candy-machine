@@ -95,7 +95,7 @@ export default function Home() {
         >
           <div className="-m-4 -mt-10 flex items-center">
             <img className="h-32" src="/logo.png"/>
-            <p className="text-2xl">Hammurabi</p>
+            <p className="text-xl">Hammurabi's NFT</p>
           </div>
           <div className="flex items-center">
             {connected && (
@@ -224,17 +224,17 @@ export default function Home() {
       </div>
       <div className="flex justify-center space-x-14 mt-6 md:space-x-48 bg-gradient-to-t from-green-600  min-h-20 to-transparent -translate-y-12 h-32 w-screen">
 
-        <a className="flex flex-col items-center justify-center text-xs" href="https://discord.gg/JQecN2HU">
+        <a className="flex flex-col items-center text-center justify-center text-xs" href="https://discord.gg/JQecN2HU">
           <img className="w-14" src="https://img.icons8.com/ios/50/000000/discord-logo--v1.png"/>
-          Discord
+          Babylon Discord
         </a>
-        <a className="flex flex-col items-center justify-center text-xs" href="https://twitter.com/BabylonDao">
+        <a className="flex flex-col items-center text-center justify-center text-xs" href="https://twitter.com/BabylonDao">
         <img className="w-14" src="https://img.icons8.com/ios/50/000000/twitter--v1.png"/>
-        Twitter
+        Babylon Twitter
         </a>
-        <a className="flex flex-col items-center justify-center text-xs" href="https://babylondao.finance/#/">
+        <a className="flex flex-col items-center text-center justify-center text-xs" href="https://babylondao.finance/#/">
         <img className="w-14" src="https://img.icons8.com/material-outlined/96/000000/link--v1.png"/>
-        Website
+        Babylon Website
         </a>
 
       </div>
