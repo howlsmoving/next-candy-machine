@@ -189,7 +189,7 @@ export default function Home() {
                               
                               <div className="">
 
-                              <Image className="rounded-full shadow-md" src={showcase} />
+                              <Image className="rounded-full shadow-lg" src={showcase} />
                               </div>
 
                               <div className="mr-auto text-sm font-bold text-lg">
