@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       
       fontFamily: {
-        kong: "'Kongtext', san-serif",
+        kong: ["Kongtext", "sans-serif"]
       },
 
 

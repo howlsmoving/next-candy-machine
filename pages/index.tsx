@@ -76,7 +76,7 @@ export default function Home() {
           content="Simplified NextJs with typescript example app integrated with Metaplex's Candy Machine"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link href="http://fonts.cdnfonts.com/css/kongtext" rel="stylesheet" />
+        <link href="/fonts/kongtext" rel="stylesheet" />
                 
       </Head>
 
