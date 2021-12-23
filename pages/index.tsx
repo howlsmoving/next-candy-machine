@@ -70,7 +70,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Hammurabis</title>
+        <title>{"Hammurabi's NFT"}</title>
         <meta
           name="description"
           content="Simplified NextJs with typescript example app integrated with Metaplex's Candy Machine"
@@ -160,7 +160,7 @@ export default function Home() {
                         </button>
                         <section className="-mx-14">
 
-                        <p className="text-center text-lg -mx-10">To celebrate the launch of Babylon, archaeological research has uncovered many mosaics of Hammurabi, king of Babylon well ahead of his time. Try to mint some of these mosaics, and win some special roles, and maybe a place among the Uruks.</p>
+                        <p className="text-center text-lg -mx-10">To celebrate the launch of Babylon, some archaeological researches have uncovered many mosaics of Hammurabi, king of Babylon well ahead of his time. Try to mint some of these mosaics, and win some special roles, and maybe a place among the Uruks.</p>
                         </section>
             
                       </div>
@@ -195,7 +195,7 @@ export default function Home() {
                               <div className="mr-auto text-sm font-bold text-lg">
                                 <span className="">NFTS Available: </span>
                                 {nftsData.itemsRemaining}
-                                <p>
+                                <p className="text-green-500 py-2">
                                 {nftsData.itemsRedeemed} / 1000 MINTED
                                 </p>
                                 <p>Contract : </p>
@@ -209,7 +209,7 @@ export default function Home() {
                             </div>
         
             </div>
-            <p className="text-center text-lg -mx-10">To celebrate the launch of Babylon, archaeological research has uncovered many mosaics of Hammurabi, king of Babylon well ahead of his time. Try to mint some of these mosaics, and win some special roles, and maybe a place among the Uruks.</p>
+            <p className="text-center text-lg -mx-10">To celebrate the launch of Babylon, some archaeological researches have uncovered many mosaics of Hammurabi, king of Babylon well ahead of his time. Try to mint some of these mosaics, and win some special roles, and maybe a place among the Uruks.</p>
             </div>
             )}
         </div>
