@@ -135,8 +135,8 @@ export default function Home() {
                               <Image className="rounded-full shadow-md" src={showcase} />
                               </div>
 
-                              <div className="mr-auto text-sm font-bold text-lg">
-                                <p className="py-2 text-xl">NFTS Available: 
+                              <div className="text-sm font-bold text-lg">
+                                <p className="py-2 text-xl">NFT Available: 
                                 {nftsData.itemsRemaining}
                                 
                                 </p>
@@ -150,17 +150,17 @@ export default function Home() {
                               </div>
                             </div>
                             )}
-                        <h1 className="mb-10 text-3xl text-center font-bold">MINT PRICE:1 SOL</h1>
+                        <h1 className="mb-8 -mx-20 sm:text-2xl text-3xl text-center font-bold">MINT PRICE:1 SOL</h1>
                         <button
                           onClick={startMint}
                           disabled={isMinting}
                           className="px-4 my-10 py-2 mx-auto font-bold text-white text-5xl bg-yellow-300 hover:bg-yellow-500 shadow-lg"
                           >
-                          {isMinting ? "loading" : "mint 1"}
+                          {isMinting ? "loading" : "mint"}
                         </button>
                         <section className="-mx-14">
 
-                        <p className="text-center text-lg -mx-10">To celebrate the launch of Babylon, some archaeological researches have uncovered many mosaics of Hammurabi, king of Babylon well ahead of his time. Try to mint some of these mosaics, and win some special roles, and maybe a place among the Uruks.</p>
+                        <p className="text-center text-lg mx-10 md:-mx-10">To celebrate the launch of Babylon, some archaeological researches have uncovered many mosaics of Hammurabi, king of Babylon well ahead of his time. Try to mint some of these mosaics, and win some special roles, and maybe a place among the Uruks.</p>
                         </section>
             
                       </div>
@@ -193,7 +193,7 @@ export default function Home() {
                               </div>
 
                               <div className="mr-auto text-sm font-bold text-lg">
-                                <span className="">NFTS Available: </span>
+                                <span className="">NFT Available: </span>
                                 {nftsData.itemsRemaining}
                                 <p className="text-green-500 py-2">
                                 {nftsData.itemsRedeemed} / 1000 MINTED
@@ -209,8 +209,10 @@ export default function Home() {
                             </div>
         
             </div>
-            <p className="text-center text-lg -mx-10">To celebrate the launch of Babylon, some archaeological researches have uncovered many mosaics of Hammurabi, king of Babylon well ahead of his time. Try to mint some of these mosaics, and win some special roles, and maybe a place among the Uruks.</p>
-            </div>
+            <section className="-mx-14">
+
+<p className="text-center text-lg mx-2 md:-mx-10">To celebrate the launch of Babylon, some archaeological researches have uncovered many mosaics of Hammurabi, king of Babylon well ahead of his time. Try to mint some of these mosaics, and win some special roles, and maybe a place among the Uruks.</p>
+</section></div>
             )}
         </div>
         {/* <div className="flex flex-col w-full">
